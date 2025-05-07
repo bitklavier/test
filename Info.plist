@@ -8,7 +8,7 @@
     <key>CFBundleIdentifier</key>
     <string>com.manyarrowsmusic.bitklavier</string>
     <key>CFBundleName</key>
-    <string>MyMacApp</string>
+    <string>bitKlavier</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
 </dict>

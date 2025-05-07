@@ -22,7 +22,7 @@ set(PROJECT_NAME "bitKlavier2")
 # Worry not, JUCE's PRODUCT_NAME can have spaces (and is what DAWs will display)
 # You can also just have it be the same thing as PROJECT_NAME
 # You may want to append the major version on the end of this (and PROJECT_NAME) ala:
-set(PROJECT_NAME "bitKlavier2${MAJOR_VERSION}")
+set(PROJECT_NAME "bitKlavier${MAJOR_VERSION}")
 # Doing so enables major versions to show up in IDEs and DAWs as separate plugins
 # allowing you to change parameters and behavior without breaking existing user projects
 set(PRODUCT_NAME "bitKlavier${MAJOR_VERSION}")
@@ -36,16 +36,16 @@ set(BUNDLE_ID "com.manyarrowsmusic.bitKlavier")
 project(${PROJECT_NAME} VERSION ${CURRENT_VERSION})
 
 cmake_minimum_required(VERSION 3.16)
-project(MyMacApp LANGUAGES CXX)
+
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "" FORCE)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "" FORCE)
 set(CMAKE_MACOSX_BUNDLE TRUE)
 
-add_executable(MyMacApp MACOSX_BUNDLE source/main.cpp)
+add_executable(${PROJECT_NAME} MACOSX_BUNDLE source/main.cpp)
 
-set_target_properties(MyMacApp PROPERTIES
+set_target_properties(${PROJECT_NAME}  PROPERTIES
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/Info.plist"
 )
 # Set output directory for the app bundle
