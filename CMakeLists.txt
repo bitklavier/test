@@ -56,8 +56,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 # IPP support, comment out to disable
 include(PamplejuceIPP)
 
-# Everything related to the tests target
-include(Tests)
+
 
 # A separate target for Benchmarks (keeps the Tests target fast)
 include(Benchmarks)
